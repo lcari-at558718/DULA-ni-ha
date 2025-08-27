@@ -1,0 +1,20 @@
+package cce105;
+
+class warrior extends gamecharacter {
+    public warrior(String name) {
+        super(name, 100, 15); 
+    }
+
+  
+    public void attack(gamecharacter opponent) {
+        opponent.hp -= attackDamage;
+        javax.swing.JOptionPane.showMessageDialog(null, name + " swings a mighty sword! (" + attackDamage + " damage)");
+    }
+
+    
+    public void specialMove(gamecharacter opponent) {
+        int damage = 25;
+        opponent.hp -= damage;
+        javax.swing.JOptionPane.showMessageDialog(null, name + " uses Shield Bash! (" + damage + " damage)");
+    }
+}
