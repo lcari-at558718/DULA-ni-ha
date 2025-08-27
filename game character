@@ -1,0 +1,28 @@
+package cce105;
+
+abstract class gamecharacter {
+    String name;
+    int hp;
+    int attackDamage;
+
+    public gamecharacter(String name, int hp, int attackDamage) {
+        this.name = name;
+        this.hp = hp;
+        this.attackDamage = attackDamage;
+    }
+
+    public abstract void attack(gamecharacter opponent);
+    public abstract void specialMove(gamecharacter opponent);
+
+    public boolean isAlive() {
+        return hp > 0;
+    }
+
+    public String getStatus() {
+        return name + ": " + hp + " HP";
+    }
+
+    public void showName() {
+        System.out.println("Character: " + name);
+    }
+}
