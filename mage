@@ -1,0 +1,20 @@
+package cce105;
+
+class mage extends gamecharacter {
+    public mage(String name) {
+        super(name, 100, 20);  
+    }
+
+   
+    public void attack(gamecharacter opponent) {
+        opponent.hp -= attackDamage;
+        javax.swing.JOptionPane.showMessageDialog(null, name + " casts Fireball! (" + attackDamage + " damage)");
+    }
+
+  
+    public void specialMove(gamecharacter opponent) {
+        int damage = 30;
+        opponent.hp -= damage;
+        javax.swing.JOptionPane.showMessageDialog(null, name + " uses Lightning Storm! (" + damage + " damage)");
+    }
+}
